@@ -1,0 +1,58 @@
+# فایل‌های پایتون
+__pycache__/
+*.py[cod]
+*$py.class
+
+# محیط‌های مجازی
+venv/
+env/
+.venv/
+
+# فایل‌های حساس
+.env
+*.env
+secrets.py
+
+# فایل‌های لاگ و دیتابیس
+*.log
+*.sqlite3
+*.db
+
+# فایل‌های تولیدشده توسط IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# فایل‌های وابستگی‌ها
+*.egg-info/
+dist/
+build/
+*.egg
+*.whl
+
+# فایل‌های کش
+.cache/
+.pytest_cache/
+
+# فایل‌های سیستم عامل
+.DS_Store
+Thumbs.db
+
+# فایل‌های تولیدشده توسط Jupyter Notebook
+.ipynb_checkpoints/
+
+# فایل‌های تست
+.coverage
+htmlcov/
+
+# فایل‌های موقت
+*.tmp
+*.temp
+
+# فایل‌های خاص پروژه
+/static/images/
+/static/fonts/
+/static/animation1.gif
+/static/animation2.gif
+/static/animation3.gif

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="پلتفرم پرسش و پاسخ هوشمند با استفاده از هوش مصنوعی">
+    <title>ژاویر - منتور هوشمند</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="menu-icon" id="menu-icon">☰</div>
+            <div class="dropdown-menu" id="dropdown-menu">
+                <ul>
+                    <li>
+                        <a href="#" id="theme-color">
+                            <span>🎨</span> انتخاب تم رنگی
+                        </a>
+                        <div class="theme-selector">
+                            <select id="theme-dropdown" aria-label="انتخاب تم رنگی">
+                                <option value="default">پیش‌فرض</option>
+                                <option value="dark">تاریک</option>
+                                <option value="blue">آبی</option>
+                                <option value="green">سبز</option>
+                                <option value="purple">بنفش</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" id="clear-chat">
+                            <span>🧹</span> پاک کردن چت
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" id="report">
+                            <span>📄</span> گزارش
+                        </a>
+                    </li>
+                    <!-- گزینه خروج -->
+                    <li>
+                        <a href="#" id="logout">
+                            <span>🚪</span> خروج
+                        </a>
+                    </li>
+                </ul>
+            </div>
+                        
+            <h1>پرسش و پاسخ هوشمند</h1>
+            <div class="animation-container">
+                <img src="/static/animation1.gif" alt="انیمیشن ۱" class="animation active">
+                <img src="/static/animation2.gif" alt="انیمیشن ۲" class="animation">
+                <img src="/static/animation3.gif" alt="انیمیشن ۳" class="animation">
+            </div>
+        </header>
+        <main class="main-content">
+            <!-- بخش ثبت نام -->
+            <section class="register-section" id="register-section">
+                <form id="register-form" role="form" aria-label="فرم ثبت نام">
+                    <label for="name">نام:</label>
+                    <input type="text" id="name" placeholder="نام خود را وارد کنید" required>
+                    <label for="phone-number">شماره موبایل:</label>
+                    <input type="text" id="phone-number" placeholder="شماره موبایل خود را وارد کنید" required>
+                    <button type="submit">ثبت نام</button>
+                </form>
+            </section>
+
+            <!-- بخش پرسش و پاسخ (چت) -->
+            <section class="ask-section" id="ask-section" style="display: none;">
+                <form id="ask-form" role="form" aria-label="فرم پرسش و پاسخ">
+                    <label for="question" class="sr-only">سوال خود را اینجا بنویسید</label>
+                    <textarea id="question" placeholder="سوال خود را اینجا بنویسید..." aria-label="متن سوال"></textarea>
+                    <button type="button" id="speech-button" aria-label="پرسش از طریق گفتار">🎤</button>
+                    <button type="submit" aria-label="ارسال سوال">ارسال سوال</button>
+                </form>
+
+                <!-- بخش سوالات متداول -->
+                <section class="faq-section" id="faq-section" style="display: none;">
+                    <div class="faq-list">
+                        <!-- اینجا 3 سوال اول نمایش داده می‌شوند -->
+                        <button class="suggested-question" data-question="لیست غذا بده ؟">
+                            <span>🍔</span>
+                            لیست غذا بده؟
+                        </button>
+                        <button class="suggested-question" data-question="دسر دارید ؟">
+                            <span>🍰</span>
+                            دسر دارید؟
+                        </button>
+                        <button class="suggested-question" data-question=" قیمت سفارشات؟">
+                            <span>💲</span>
+                            قیمت سفارسات؟
+                        </button>
+                    </div>
+                </section>
+
+                <!-- بخش پاسخ (چت) -->
+                <section class="response-section">
+                    <div id="response" role="status" aria-live="polite"></div>
+                </section>
+            </section>
+        </main>
+        <footer class="footer">
+            <p>تمامی حقوق محفوظ است © ۲۰۲۳</p>
+        </footer>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
